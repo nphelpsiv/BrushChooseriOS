@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrushChooser/buttonsView.swift"
+            timestampString = "508101990.281213"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "buttonsView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrushChooser.buttonsView.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BrushChooser.buttonsView&gt;"
+                  moduleName = "BrushChooser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Authenticated%20User/Desktop/Mobile-Programming/BrusherChooser1/BrushChooser/BrushChooser/buttonsView.swift"
+                  timestampString = "508103207.871151"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrushChooser.buttonsView.(widthButton in _889331269A081174A5F56E2076D72251).getter : __ObjC.UIButton"
+                  moduleName = "BrushChooser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Authenticated%20User/Desktop/Mobile-Programming/BrusherChooser1/BrushChooser/BrushChooser/buttonsView.swift"
+                  timestampString = "508103207.873382"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrushChooser.buttonsView.(widthButton in _889331269A081174A5F56E2076D72251).setter : __ObjC.UIButton"
+                  moduleName = "BrushChooser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Authenticated%20User/Desktop/Mobile-Programming/BrusherChooser1/BrushChooser/BrushChooser/buttonsView.swift"
+                  timestampString = "508103207.875749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
