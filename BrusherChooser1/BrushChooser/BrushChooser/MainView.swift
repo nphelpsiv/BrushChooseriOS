@@ -47,7 +47,7 @@ class MainView: UIView
         //add to util stack view
         endCapButtonView = EndCapButtonsView()
         endCapButtonView?.frame = CGRect(x: 10.0, y: 20.0, width: 300.0, height: 400.0)
-        endCapButtonView?.backgroundColor = UIColor.black
+        endCapButtonView?.backgroundColor = UIColor.lightGray
         
         stackView?.addArrangedSubview(endCapButtonView!)
         

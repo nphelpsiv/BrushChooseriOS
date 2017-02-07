@@ -14,7 +14,7 @@ class BrushColorView: UIControl
     private var brushColorRect: CGRect = CGRect.zero
     private var _angle: CGFloat = 0.0
     private var touchSpot: CGPoint = CGPoint.zero
-    private var color: UIColor = UIColor.black
+    private var nibColor: UIColor = UIColor.black
     override func draw(_ rect: CGRect)
     {
         brushColorRect = CGRect(x: 0.0, y: 0.0, width: bounds.size.width, height: bounds.size.height)
@@ -29,7 +29,7 @@ class BrushColorView: UIControl
         {
             for var y in 0...Int(bounds.size.height)
             {
-                color = colorFromColorWheelWithBoundingRect(rect: brushColorRect, point: CGPoint(x: x,y: y), brightness: 1.0, alpha:1.0)
+                let color = colorFromColorWheelWithBoundingRect(rect: brushColorRect, point: CGPoint(x: x,y: y), brightness: 1.0, alpha:1.0)
                 context.setStrokeColor(color.cgColor)
                 context.addRect(CGRect(x: x, y: y, width: 1, height: 1))
                 context.drawPath(using: .eoFillStroke)
@@ -42,6 +42,8 @@ class BrushColorView: UIControl
         
         nibRect.origin.x = brushColorRect.midX + touchSpot.x - nibRect.width / 2.0
         nibRect.origin.y = brushColorRect.midY + touchSpot.y - nibRect.width / 2.0
+        
+        nibColor = colorFromColorWheelWithBoundingRect(rect: brushColorRect, point: CGPoint(x: nibRect.origin.x,y: nibRect.origin.y), brightness: 1.0, alpha: 1.0)
         
         context.setFillColor(UIColor.black.cgColor)
         context.addEllipse(in: nibRect)
@@ -78,7 +80,6 @@ class BrushColorView: UIControl
         
         angle = atan2(touchSpot.y, touchSpot.x)
         
-        
         sendActions(for: .valueChanged)
         
         
@@ -94,6 +95,6 @@ class BrushColorView: UIControl
             setNeedsDisplay()
         }
     }
-    var getColor: UIColor {return color}
+    var getColor: UIColor {return nibColor}
 
 }

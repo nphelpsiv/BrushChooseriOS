@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainView = MainView(frame: UIScreen.main.bounds)
         window?.rootViewController?.view.addSubview(mainView!)
         
-        mainView?.brushView?
-        
+        mainView?.brushView?.addTarget(self, action: #selector(colorChanged), for: .valueChanged)
         mainView?.slideView?.getSlider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
         
         mainView?.endCapButt?.getRoundButton.addTarget(self, action: #selector(roundButton), for: .touchDown)
@@ -38,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func colorChanged()
+    {
+        mainView?.drawerView?.color = (mainView?.brushView?.getColor)!
+    }
     func sliderChanged(){
         NSLog(String(describing: mainView?.drawerView?.lineWidth))
         NSLog(String(describing: mainView?.slideView?.getSlider.value))
