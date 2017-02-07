@@ -11,12 +11,21 @@ import UIKit
 
 class SliderView: UIView{
     private var slider: UISlider = UISlider()
+    private var drawView: DrawingView? = nil
+    private var label: UILabel = UILabel()
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        slider.frame = CGRect(x: 10.0, y: 20.0, width: 190.0, height: 50.0)
-        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        
+        label.text = " Adjust Width:"
+        label.font = UIFont(name: "Helvetica", size: 10)
+        label.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 15.0)
+        addSubview(label)
+        slider.frame = CGRect(x: 10.0 , y: 10.0, width: 295.0, height: 50.0)
+        slider.minimumValue = 0.5
+        slider.maximumValue = 50.0
+        //slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
         addSubview(slider)
     }
     
@@ -25,6 +34,8 @@ class SliderView: UIView{
     }
     func sliderValueChanged()
     {
-        NSLog("Sliderchanged")
+        //NSLog(String(describing: drawView?.lineWidth))
     }
+    
+    var getSlider: UISlider {return slider}
 }

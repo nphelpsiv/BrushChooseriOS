@@ -7,24 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6822C91E4942A3003C6024 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D6822C81E4942A3003C6024 /* Info.plist */; };
+		3D6822CB1E49517A003C6024 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6822CA1E49517A003C6024 /* DrawingView.swift */; };
+		3D6822CF1E496E53003C6024 /* EndCapButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6822CE1E496E53003C6024 /* EndCapButtonsView.swift */; };
+		3D6822D11E49A517003C6024 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D6822D01E49A517003C6024 /* Default-568h@2x.png */; };
 		3DA596171E48F454008D165D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA596161E48F454008D165D /* AppDelegate.swift */; };
 		3DA596191E48F454008D165D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA596181E48F454008D165D /* ViewController.swift */; };
 		3DA5961E1E48F454008D165D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA5961D1E48F454008D165D /* Assets.xcassets */; };
 		3DA596291E48FA04008D165D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA596281E48FA04008D165D /* MainView.swift */; };
 		3DA5962B1E48FB97008D165D /* BrushColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5962A1E48FB97008D165D /* BrushColorView.swift */; };
-		3DA5962D1E48FDC5008D165D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DA5962C1E48FDC5008D165D /* Info.plist */; };
 		3DA5962F1E48FF77008D165D /* buttonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5962E1E48FF77008D165D /* buttonsView.swift */; };
 		3DA596311E490C01008D165D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA596301E490C01008D165D /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D6822C81E4942A3003C6024 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D6822CA1E49517A003C6024 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		3D6822CE1E496E53003C6024 /* EndCapButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndCapButtonsView.swift; sourceTree = "<group>"; };
+		3D6822D01E49A517003C6024 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3DA596131E48F454008D165D /* BrushChooser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrushChooser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA596161E48F454008D165D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA596181E48F454008D165D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DA5961D1E48F454008D165D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA596281E48FA04008D165D /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3DA5962A1E48FB97008D165D /* BrushColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushColorView.swift; sourceTree = "<group>"; };
-		3DA5962C1E48FDC5008D165D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../../.Trash/Info.plist; sourceTree = "<group>"; };
 		3DA5962E1E48FF77008D165D /* buttonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonsView.swift; sourceTree = "<group>"; };
 		3DA596301E490C01008D165D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +49,7 @@
 		3DA5960A1E48F453008D165D = {
 			isa = PBXGroup;
 			children = (
+				3D6822D01E49A517003C6024 /* Default-568h@2x.png */,
 				3DA596151E48F454008D165D /* BrushChooser */,
 				3DA596141E48F454008D165D /* Products */,
 			);
@@ -63,10 +70,12 @@
 				3DA596181E48F454008D165D /* ViewController.swift */,
 				3DA5961D1E48F454008D165D /* Assets.xcassets */,
 				3DA596281E48FA04008D165D /* MainView.swift */,
-				3DA5962C1E48FDC5008D165D /* Info.plist */,
+				3D6822C81E4942A3003C6024 /* Info.plist */,
 				3DA5962A1E48FB97008D165D /* BrushColorView.swift */,
 				3DA5962E1E48FF77008D165D /* buttonsView.swift */,
 				3DA596301E490C01008D165D /* SliderView.swift */,
+				3D6822CA1E49517A003C6024 /* DrawingView.swift */,
+				3D6822CE1E496E53003C6024 /* EndCapButtonsView.swift */,
 			);
 			path = BrushChooser;
 			sourceTree = "<group>";
@@ -130,8 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DA5962D1E48FDC5008D165D /* Info.plist in Resources */,
 				3DA5961E1E48F454008D165D /* Assets.xcassets in Resources */,
+				3D6822C91E4942A3003C6024 /* Info.plist in Resources */,
+				3D6822D11E49A517003C6024 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,12 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6822CB1E49517A003C6024 /* DrawingView.swift in Sources */,
 				3DA596191E48F454008D165D /* ViewController.swift in Sources */,
 				3DA5962F1E48FF77008D165D /* buttonsView.swift in Sources */,
 				3DA5962B1E48FB97008D165D /* BrushColorView.swift in Sources */,
 				3DA596311E490C01008D165D /* SliderView.swift in Sources */,
 				3DA596291E48FA04008D165D /* MainView.swift in Sources */,
 				3DA596171E48F454008D165D /* AppDelegate.swift in Sources */,
+				3D6822CF1E496E53003C6024 /* EndCapButtonsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +302,7 @@
 				3DA596271E48F454008D165D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

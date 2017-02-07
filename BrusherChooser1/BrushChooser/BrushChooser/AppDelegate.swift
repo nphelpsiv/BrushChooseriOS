@@ -22,12 +22,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainView = MainView(frame: UIScreen.main.bounds)
         window?.rootViewController?.view.addSubview(mainView!)
         
+        mainView?.brushView?
         
+        mainView?.slideView?.getSlider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
+        
+        mainView?.endCapButt?.getRoundButton.addTarget(self, action: #selector(roundButton), for: .touchDown)
+        mainView?.endCapButt?.getbuttButton.addTarget(self, action: #selector(buttButton), for: .touchDown)
+        mainView?.endCapButt?.getsquareButton.addTarget(self, action: #selector(squareButton), for: .touchDown)
+        
+        mainView?.buttView?.getRoundButton.addTarget(self, action: #selector(roundJoinButton), for: .touchDown)
+        mainView?.buttView?.getbevelButton.addTarget(self, action: #selector(bevelButton), for: .touchDown)
+        mainView?.buttView?.getMiterButton.addTarget(self, action: #selector(miterButton), for: .touchDown)
         
         // Override point for customization after application launch.
         return true
     }
 
+    func sliderChanged(){
+        NSLog(String(describing: mainView?.drawerView?.lineWidth))
+        NSLog(String(describing: mainView?.slideView?.getSlider.value))
+        mainView?.drawerView?.lineWidth = (CGFloat((mainView?.slideView?.getSlider.value)!))
+    
+    }
+    func roundButton()
+    {
+        mainView?.drawerView?.endCapState = .round
+    }
+    func buttButton()
+    {
+        mainView?.drawerView?.endCapState = .butt
+    }
+    func squareButton()
+    {
+        mainView?.drawerView?.endCapState = .square
+    }
+    
+    func roundJoinButton()
+    {
+        mainView?.drawerView?.joinState = .round
+    }
+    func bevelButton()
+    {
+        mainView?.drawerView?.joinState = .bevel
+    }
+    func miterButton()
+    {
+        mainView?.drawerView?.joinState = .miter
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
