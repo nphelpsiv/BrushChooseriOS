@@ -17,12 +17,11 @@ class BrushColorView: UIControl
     private var nibColor: UIColor = UIColor.black
     override func draw(_ rect: CGRect)
     {
-        brushColorRect = CGRect(x: 0.0, y: 0.0, width: bounds.size.width, height: bounds.size.height)
+        brushColorRect = CGRect(x: 26.0, y: 22.0, width: bounds.size.width * 0.85, height: bounds.size.height * 0.85)
         
         let context: CGContext = UIGraphicsGetCurrentContext()!
-        //context.setFillColor(UIColor.blue.cgColor)
         context.addEllipse(in: brushColorRect)
-        //context.drawPath(using: .fill)
+
         
         
         for var x in 0...Int(bounds.size.width)
@@ -38,16 +37,26 @@ class BrushColorView: UIControl
             }
         }
         
-        var nibRect: CGRect = CGRect(x: 0.0, y: brushColorRect.size.height/2.0, width: 10.0, height: 10.0)
+        
+        var nibRect: CGRect = CGRect(x: 0.0, y: brushColorRect.size.height/2.0, width: 15.0, height: 15.0)
         
         nibRect.origin.x = brushColorRect.midX + touchSpot.x - nibRect.width / 2.0
         nibRect.origin.y = brushColorRect.midY + touchSpot.y - nibRect.width / 2.0
         
-        nibColor = colorFromColorWheelWithBoundingRect(rect: brushColorRect, point: CGPoint(x: nibRect.origin.x,y: nibRect.origin.y), brightness: 1.0, alpha: 1.0)
+        if(brushColorRect.contains(CGPoint(x: nibRect.origin.x,y:  nibRect.origin.y)))
+        {
+            nibColor = colorFromColorWheelWithBoundingRect(rect: brushColorRect, point: CGPoint(x: nibRect.origin.x,y: nibRect.origin.y), brightness: 1.0, alpha: 1.0)
+            NSLog( "Changed to: \(nibColor)")
+            sendActions(for: .valueChanged)
+            
+            context.setFillColor(nibColor.cgColor)
+            context.setStrokeColor(UIColor.gray.cgColor)
+            context.setLineWidth(2)
+            context.addEllipse(in: nibRect)
+            context.drawPath(using: .fillStroke)
+        }
+
         
-        context.setFillColor(UIColor.black.cgColor)
-        context.addEllipse(in: nibRect)
-        context.drawPath(using: .fill)
         
     }
     func colorFromColorWheelWithBoundingRect(rect: CGRect, point: CGPoint, brightness: CGFloat, alpha: CGFloat) -> UIColor
@@ -69,32 +78,23 @@ class BrushColorView: UIControl
         
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: _alpha)
     }
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
     {
+        setNeedsDisplay()
+        
         let touch: UITouch = touches.first!
         touchSpot = touch.location(in: self)
-        NSLog("x: \(touchSpot.x) y: \(touchSpot.y)")
-        
-        touchSpot.x -= brushColorRect.midX //(_knobRect.origin.x +_knobRect.width / 2.0)
+
+        touchSpot.x -= brushColorRect.midX
         touchSpot.y -= brushColorRect.midY
         
-        angle = atan2(touchSpot.y, touchSpot.x)
         
-        sendActions(for: .valueChanged)
+        
         
         
         
     }
-    var angle: CGFloat {
-        get{
-            return _angle
-        }
-        set{
-            _angle = newValue
-            // TODO: angle bounds?
-            setNeedsDisplay()
-        }
-    }
+
     var getColor: UIColor {return nibColor}
 
 }

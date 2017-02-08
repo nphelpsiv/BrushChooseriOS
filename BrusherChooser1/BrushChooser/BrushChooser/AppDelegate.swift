@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func colorChanged()
     {
+        NSLog( "Changed to: \(mainView?.brushView?.getColor)")
         mainView?.drawerView?.color = (mainView?.brushView?.getColor)!
     }
     func sliderChanged(){

@@ -31,11 +31,6 @@ class DrawingView: UIControl
         context?.addLine(to: CGPoint(x: 300.0, y: 30.0))
         context?.setStrokeColor(strokeColor.cgColor)
         context?.drawPath(using: .stroke)
-        label = UILabel()
-        label.text = " DRAW HERE:"
-        label.font = UIFont(name: "Helvetica", size: 10)
-        label.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 15.0)
-        //addSubview(label)
 
     }
 

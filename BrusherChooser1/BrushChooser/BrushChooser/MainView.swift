@@ -27,12 +27,12 @@ class MainView: UIView
         mainStackView?.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         mainStackView?.axis = UILayoutConstraintAxis.vertical
         mainStackView?.distribution = UIStackViewDistribution.fillEqually
+        //mainStackView?.spacing = 50.0;
         addSubview(mainStackView!)
         
         //create color picker view
         brushColorView = BrushColorView()
-        brushColorView?.frame = CGRect(x: 10.0, y: 20.0, width: frame.width, height: frame.height)
-        brushColorView?.backgroundColor = UIColor.black
+        brushColorView?.frame = CGRect(x: 0.0 , y: 0.0, width: frame.width, height: frame.height)
         
         mainStackView?.addArrangedSubview(brushColorView!)
         
@@ -42,12 +42,14 @@ class MainView: UIView
         stackView?.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         stackView?.axis = UILayoutConstraintAxis.vertical
         stackView?.distribution = UIStackViewDistribution.fillEqually
+        stackView?.spacing = 5.0
+        //stackView?.alignment = .firstBaseline
         mainStackView?.addArrangedSubview(stackView!)
         
         //add to util stack view
         endCapButtonView = EndCapButtonsView()
-        endCapButtonView?.frame = CGRect(x: 10.0, y: 20.0, width: 300.0, height: 400.0)
-        endCapButtonView?.backgroundColor = UIColor.lightGray
+        endCapButtonView?.frame = CGRect(x: 10.0, y: 20.0, width: 300.0, height: 0.0)
+        endCapButtonView?.backgroundColor = UIColor.black
         
         stackView?.addArrangedSubview(endCapButtonView!)
         
@@ -69,6 +71,10 @@ class MainView: UIView
         
         stackView?.addArrangedSubview(drawView!)
         
+//        let views: [String:UIView] = ["brush": brushColorView!, "util":stackView!]
+//        
+//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[brush(>=5)]-[util(>=5)]-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -81,16 +87,16 @@ class MainView: UIView
     var drawerView: DrawingView? {return drawView}
     var endCapButt: EndCapButtonsView? {return endCapButtonView}
 
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        
-//        var r: CGRect = bounds
-//        //let heigth: CGFloat = r.height * 0.5
-//        //(brushColorView!.frame, r) = r.divided(atDistance: r.height * 0.5, from: .minYEdge)
-//        //(stackView!.frame, r) = r.divided(atDistance: r.height * 0.5, from: .maxYEdge)
-//        //(buttonView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
-//        //(sliderView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
-//        //(drawView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
-//    }
+//   override func layoutSubviews() {
+//      super.layoutSubviews()
+//    
+//            var r: CGRect = bounds
+//       let heigth: CGFloat = r.height * 0.5
+//            (brushColorView!.frame, r) = r.divided(atDistance: r.height * 0.5, from: .minYEdge)
+//            (stackView!.frame, r) = r.divided(atDistance: r.height * 0.5, from: .maxYEdge)
+//        (buttonView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
+//       (sliderView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
+//      (drawView!.frame, r) = r.divided(atDistance: r.height * 0.15, from: .minYEdge)
+//   }
     
 }
